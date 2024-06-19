@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sample_todo/features/home/domain/navigation_config.dart';
-import 'package:sample_todo/features/home/presentation/widgets/navigate_button.dart';
+import 'package:sample_todo/features/home/presentation/widget/navigate_button.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -16,7 +16,8 @@ class HomePage extends StatelessWidget {
           children: <Widget>[
             NavigateButton(navigationConfig: NavigationConfig(title: 'Counter', path: '/counter')),
             NavigateButton(navigationConfig: NavigationConfig(title: 'Random Pokemon', path: '/pokemon')),
-            NavigateButton(navigationConfig: NavigationConfig(title: 'Todo', path: '/todo'))
+            NavigateButton(navigationConfig: NavigationConfig(title: 'Todo', path: '/todo')),
+            NavigateButton(navigationConfig: NavigationConfig(title: 'Design', path: '/design'))
           ],
         )
       ),
