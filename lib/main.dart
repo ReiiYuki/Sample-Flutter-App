@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:sample_todo/features/design_system/configs/theme.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:sample_todo/feature/design_system/config/theme.dart';
 import 'package:sample_todo/routes.dart';
 
-void main() {
+Future main() async {
+  await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }
 
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: dotenv.env['APP_NAME']!,
       theme: designSystemTheme,
       routes: appRoutes,
     );
