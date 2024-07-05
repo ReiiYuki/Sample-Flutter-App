@@ -13,10 +13,12 @@ class CounterLabel extends StatelessWidget {
           children: <Widget>[
             const Text(
               'You have pushed the button this many times:',
+              textDirection: TextDirection.ltr,
             ),
             Text(
               '$counter',
               style: Theme.of(context).textTheme.headlineMedium,
+              textDirection: TextDirection.ltr,
             ),
           ],
         ),

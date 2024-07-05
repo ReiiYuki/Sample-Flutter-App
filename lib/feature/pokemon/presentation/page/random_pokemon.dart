@@ -1,13 +1,14 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 import 'package:sample_todo/feature/pokemon/data/network/pokemon_api_data_provider.dart';
 import 'package:sample_todo/feature/pokemon/data/repository/pokemon_repository.dart';
 import 'package:sample_todo/feature/pokemon/domain/pokemon.dart';
 import 'package:sample_todo/feature/pokemon/presentation/widget/random_pokemon_button.dart';
 
 class RandomPokemonPage extends StatefulWidget {
-  final PokemonRepository _pokemonRepository = PokemonRepository(dataProvider: PokemonAPIDataProvider());
+  final PokemonRepository _pokemonRepository = PokemonRepository(dataProvider: PokemonAPIDataProvider(client: Client()));
 
   RandomPokemonPage({super.key});
 

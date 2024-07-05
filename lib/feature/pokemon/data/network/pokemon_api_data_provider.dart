@@ -5,9 +5,13 @@ import 'package:sample_todo/feature/pokemon/domain/pokemon.dart';
 import 'package:http/http.dart' as http;
 
 class PokemonAPIDataProvider extends PokemonDataProvider {
+  http.Client client;
+
+  PokemonAPIDataProvider({required this.client});
+  
   @override
   Future<Pokemon> getPokemon(int id) async {
-    final response = await http.get(Uri.parse('https://pokeapi.co/api/v2/pokemon/$id'));
+    final response = await client.get(Uri.parse('https://pokeapi.co/api/v2/pokemon/$id'));
 
     if (response.statusCode == 200) {
       return Pokemon.fromJSON(jsonDecode(response.body));

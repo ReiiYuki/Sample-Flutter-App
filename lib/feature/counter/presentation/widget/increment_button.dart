@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sample_todo/feature/counter/utils/increment.dart';
 
 class IncrementButton extends StatelessWidget {
   const IncrementButton({super.key, required this.onIncrement, required this.counter });
@@ -7,7 +8,7 @@ class IncrementButton extends StatelessWidget {
   final int counter;
 
   void _incrementCounter() {
-    onIncrement(counter + 1);
+    onIncrement(increment(counter));
   }
 
   @override
