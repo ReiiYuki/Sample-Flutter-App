@@ -19,7 +19,8 @@ class HomePage extends StatelessWidget {
             NavigateButton(navigationConfig: NavigationConfig(title: 'Random Pokemon', path: '/pokemon')),
             NavigateButton(navigationConfig: NavigationConfig(title: 'Todo', path: '/todo')),
             NavigateButton(navigationConfig: NavigationConfig(title: 'Design', path: '/design')),
-            NavigateButton(navigationConfig: NavigationConfig(title: 'Overlay', path: '/overlay'))
+            NavigateButton(navigationConfig: NavigationConfig(title: 'Overlay', path: '/overlay')),
+            NavigateButton(navigationConfig: NavigationConfig(title: 'Webview', path: '/browse'))
           ],
         )
       ),
