@@ -39,7 +39,7 @@ platform :android do
 
   desc "Release a new version"
     lane :issue_next_release do
-      is_releaseable = analyze_commits(match: 'android')
+      is_releaseable = analyze_commits(match: 'android-*')
       if is_releaseable
         next_version = lane_context[SharedValues::RELEASE_NEXT_VERSION]
 
