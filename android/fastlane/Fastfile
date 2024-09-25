@@ -44,6 +44,13 @@ platform :android do
         next_version = lane_context[SharedValues::RELEASE_NEXT_VERSION]
 
         notes = conventional_changelog(title: 'Changelog')
+
+        add_git_tag(
+          tag: "android-#{next_version}",
+          message: notes
+        )
+
+        # push_git_tags
       end
     end
 end
