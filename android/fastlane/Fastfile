@@ -43,7 +43,7 @@ platform :android do
       if is_releaseable
         next_version = lane_context[SharedValues::RELEASE_NEXT_VERSION]
 
-        notes = conventional_changelog(title: 'Changelog', format: 'markdown')
+        notes = conventional_changelog(title: 'Changelog', format: 'plain')
 
         add_git_tag(
           tag: "android-#{next_version}",
