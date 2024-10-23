@@ -16,7 +16,7 @@ class CounterLabel extends StatelessWidget {
               textDirection: TextDirection.ltr,
             ),
             Text(
-              '$counter',
+              'Count Test: $counter',
               style: Theme.of(context).textTheme.headlineMedium,
               textDirection: TextDirection.ltr,
             ),
