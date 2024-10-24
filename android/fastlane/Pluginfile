@@ -4,4 +4,4 @@
 
 gem 'fastlane-plugin-firebase_app_distribution'
 gem 'fastlane-plugin-increment_version_code'
-gem 'fastlane-plugin-semantic_release_bump_once', git: 'https://github.com/ReiiYuki/fastlane-plugin-semantic_release_bump_once'
+gem 'fastlane-plugin-semantic_release_bump_once', git: 'https://github.com/ReiiYuki/semantic_release_bump_once'
