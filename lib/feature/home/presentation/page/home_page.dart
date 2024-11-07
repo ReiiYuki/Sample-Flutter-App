@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
       body: const Center(
         child: Column(
           children: <Widget>[
-            NavigateButton(navigationConfig: NavigationConfig(title: 'Updated Counter', path: '/counter')),
+            NavigateButton(navigationConfig: NavigationConfig(title: 'Counter', path: '/counter')),
             NavigateButton(navigationConfig: NavigationConfig(title: 'Random Pokemon', path: '/pokemon')),
             NavigateButton(navigationConfig: NavigationConfig(title: 'Todo List', path: '/todo')),
             NavigateButton(navigationConfig: NavigationConfig(title: 'Design', path: '/design')),

@@ -22,6 +22,9 @@ void main() {
 
             await tester.tap(find.text('Counter'));
 
+            // Trigger a frame.
+            await tester.pumpAndSettle();
+
             // Finds the floating action button to tap on.
             final fab = find.byIcon(Icons.add);
 
@@ -32,7 +35,7 @@ void main() {
             await tester.pumpAndSettle();
 
             // Verify the counter increments by 1.
-            expect(find.text('1'), findsOneWidget);
+            expect(find.text('Count Test: 1'), findsOneWidget);
           } catch (error) {
             binding.takeScreenshot('error');
 
