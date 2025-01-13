@@ -43,12 +43,3 @@ post_install do |installer|
     flutter_additional_ios_build_settings(target)
   end
 end
-
-target 'Runner' do
-  # Do not change existing lines.
-  ...
-
-  target 'RunnerTests' do
-    inherit! :search_paths
-  end
-end
