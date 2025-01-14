@@ -25,5 +25,5 @@ jobs:
       - name: Upload result
         uses: actions/upload-artifact@v4
         with:
-            name: dist-without-markdown
+            name: result
             path: preview.mp4
