@@ -21,4 +21,4 @@ jobs:
           channel: "stable"
 
       - run: flutter pub get
-      - run: flutter test integration_test
+      - run: bash ./test-record.sh
