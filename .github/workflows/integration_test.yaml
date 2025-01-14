@@ -22,3 +22,8 @@ jobs:
 
       - run: flutter pub get
       - run: bash ./test-record.sh
+      - name: Upload result
+        uses: actions/upload-artifact@v4
+        with:
+            name: dist-without-markdown
+            path: *.mp4
