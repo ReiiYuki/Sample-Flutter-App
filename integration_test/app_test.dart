@@ -19,6 +19,8 @@ void main() {
             // Verify the counter starts at 0.
             expect(find.text('Counter'), findsOneWidget);
 
+            await tester.pump(new Duration(seconds: 3));
+
             await tester.tap(find.text('Counter'));
 
             // Trigger a frame.
@@ -32,6 +34,8 @@ void main() {
 
             // Trigger a frame.
             await tester.pumpAndSettle();
+
+            await tester.pump(new Duration(seconds: 3));
 
             // Verify the counter increments by 1.
             expect(find.text('Count Test: 1'), findsOneWidget);
